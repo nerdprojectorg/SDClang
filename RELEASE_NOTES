@@ -1,0 +1,55 @@
+This is the release of Snapdragon LLVM ARM C/C++ compiler toolchain version 14.1.2. This is a minor revision update
+of the toolchain. 
+
+The following are the changes in the 14.1.2 release over the 
+14.1.1 release:
+
+1. Allow mixing for BTI/PACRET enabled and non-BTI/PACRET
+enabled objects during LTO
+2. Fix for build errors for Windows-on-Snapdragon host platform
+3. Fix bug in floating point to signed integer conversion with
+saturation
+4. QC linker fix to not warn (by default) mismatch of certain
+attributes during linking
+
+The following are the changes in the 14.1.1 release of the Snapdragon LLVM
+ARM C/C++ Toolchain over the 14.1 release:
+
+1. Do not warn about attribute mismatch between object files
+2. Fix "Numeric group ID too large" error for arm-elfcopy
+
+This is the release of Snapdragon LLVM ARM C/C++ compiler toolchain version
+14.1. This is a minor revision update of the toolchain. 
+
+The 14.1 release is available for the following platforms.
+
+1. Linux x64 host running Ubuntu 14.04 or later.
+2. Windows x64 host running Windows 7 or later.
+3. Linux ARM64 host running Ubuntu 14.04 or later.
+
+The Snapdragon LLVM ARM Compiler will generate code for ARM and X86 targets and
+will not generate code for any of the other targets supported by the llvm.org
+compiler.
+
+The Snapdragon LLVM ARM 14.1 toolchain includes all changes in the
+llvm.org 14.0 release branch, and proprietary features and optimizations
+that are not available in the llvm.org 14.0 branch.
+
+The Snapdragon LLVM ARM Compiler uses the integrated assembler for assembling
+and includes a full featured proprietary linker (QC Linker) for linking.
+
+The 14.1 release includes all the features in SDLLVM 14.0.3 release as well as additional changes from llvm.org
+14.0 branch.However, the 14.1 release does not support advanced pointer authentication feature available in 14.0.3
+release since llvm.org 14.0 branch does not support these advanced pointer authentication features. The 14.1 release 
+contains support for basic pointer authentication features available in llvm.org 14.0 branch. Code bases relying on 
+advanced pointer authentication feature in 14.0.x release should not migrate to 14.1.
+
+Documentation
+The complete user guides for this Snapdragon LLVM ARM compiler and linker
+are available in the 'documents' directory at the root of the SDLLVM
+toolchain, which was downloaded and installed by the Qualcomm Package
+Manager (QPM).
+
+Contacts & Bug Reporting
+Please post all questions about this release to
+http://developer.qualcomm.com/llvm-forum
